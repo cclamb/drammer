@@ -21,11 +21,11 @@
 # script that comes with the Android NDK:
 # ./build/tools/make-standalone-toolchain.sh --ndk-dir=`pwd` --arch=arm --platform=android-24 --install-dir=./sysroot-arm/ --verbose
 
-STANDALONE_TOOLCHAIN=$(HOME)/src/android-ndk-r11c/sysroot-arm/bin
-CC=$(STANDALONE_TOOLCHAIN)/arm-linux-androideabi-gcc
-CXX=$(STANDALONE_TOOLCHAIN)/arm-linux-androideabi-g++
-CPP=$(STANDALONE_TOOLCHAIN)/arm-linux-androideabi-g++
-STRIP=$(STANDALONE_TOOLCHAIN)/arm-linux-androideabi-strip
+STANDALONE_TOOLCHAIN=/usr/bin
+CC=$(STANDALONE_TOOLCHAIN)/cc
+CXX=$(STANDALONE_TOOLCHAIN)/c++
+CPP=$(STANDALONE_TOOLCHAIN)/c++
+STRIP=$(STANDALONE_TOOLCHAIN)/strip
 
 CPPFLAGS = -std=c++11 -O3 -Wall
 LDFLAGS = -pthread -static
